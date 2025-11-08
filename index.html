@@ -3,7 +3,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CRUCIAL: Ensures the viewport width is set to the device width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <title>Instead 24 SMM Panel India - #1 SMM Reseller Panel</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
@@ -11,6 +12,8 @@
 <style>
     body {
         font-family: 'Inter', sans-serif;
+        /* Ensures no unexpected horizontal scroll from the body itself */
+        overflow-x: hidden; 
     }
     .hero-gradient {
         background: linear-gradient(90deg, #f0f9ff 0%, #e0f2fe 100%);
@@ -56,18 +59,18 @@
         border-bottom: 1px solid #e5e7eb;
     }
     
-    /* --- Social Media Logo Animation Styles (20s speed, 48px icons) - SCROLL ANIMATION --- */
+    /* --- Social Media Logo Animation Styles (Key for Horizontal Responsiveness) --- */
     @keyframes scroll-logos {
         0% {
             transform: translateX(0);
         }
-        /* Double the content width scroll for seamless loop */
         100% {
             transform: translateX(-50%); 
         }
     }
 
     .logo-container {
+        /* This is crucial for the animation not to break the layout width */
         overflow: hidden; 
         padding: 0.75rem 0;
         margin-top: 2.5rem;
@@ -77,11 +80,13 @@
     }
 
     .logo-strip {
+        /* Keeps the content in a single line to enable animation */
         white-space: nowrap; 
         display: flex;
         gap: 1.5rem; 
-        /* Animation applied here */
-        animation: scroll-logos 20s linear infinite; /* 20s speed */
+        animation: scroll-logos 20s linear infinite;
+        /* Add a very large minimum width to ensure the animation loop is seamless, though the container hides the overflow */
+        min-width: 200%; 
     }
     
     .logo-strip:hover {
@@ -99,17 +104,6 @@
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         flex-shrink: 0;
         transition: transform 0.3s ease;
-        animation: none;
-        transform: none;
-    }
-    
-    .logo-item:hover {
-        transform: scale(1.1); 
-    }
-    
-    .logo-item img {
-        animation: none;
-        transform: none;
     }
     /* --- End Social Media Logo Animation Styles --- */
 </style>
@@ -124,20 +118,14 @@
                 <!-- Logo Image (No change) -->
                 <img src="#" alt="" class="h-10 w-auto">
                 
-                <!-- 
-                    *** PROFESSIONAL TITLE DESIGN ***
-                    - Responsive text size: text-xl (mobile), md:text-2xl (desktop)
-                    - Unique colors and font weights for a premium look.
-                    - `tracking-tight` for a modern, condensed feel.
-                -->
+                <!-- Professional Header Title (Responsive Sizing) -->
                 <span class="ml-2 leading-none">
                     <span class="font-extrabold text-xl md:text-2xl text-blue-600 tracking-tight">Instead 24</span>
-                    <!-- Assuming the word 'Follows' or 'SMM' was intended here to match the title tag -->
                     <span class="font-black text-xl md:text-2xl text-gray-900 tracking-tight">SMM</span> 
                 </span>
                 
             </div>
-            <!-- Desktop Nav (Hidden on small screens) -->
+            <!-- Desktop Nav (Hidden on mobile) -->
             <nav class="hidden lg:flex items-center space-x-8">
                 <a href="#" class="text-gray-600 hover:text-blue-600 font-medium">Home</a>
                 <a href="#" class="text-gray-600 hover:text-blue-600 font-medium">Services</a>
@@ -149,7 +137,7 @@
                 <a href="https://forms.zohopublic.in/xmox2098gm1/form/InstagramCheapestPanel/formperma/ne2YRZDxix2q9KZZnfJGbk2zU7bQbh4oygprmbUMTCk" class="text-gray-600 hover:text-blue-600 font-medium">Login</a>
                 <a href="https://forms.zohopublic.in/xmox2098gm1/form/InstagramCheapestPanel/formperma/ne2YRZDxix2q9KZZnfJGbk2zU7bQbh4oygprmbUMTCk" class="bg-blue-600 text-white px-5 py-2.5 rounded-lg font-semibold shadow-md hover:bg-blue-700 transition-colors">Sign Up</a>
             </div>
-            <!-- Mobile Menu Button (Hidden on large screens) -->
+            <!-- Mobile Menu Button -->
             <div class="lg:hidden">
                 <button id="menu-btn" class="text-gray-800">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
@@ -176,7 +164,6 @@
     <section class="hero-gradient pt-20 pb-12 lg:pt-24 lg:pb-16">
         <div class="container mx-auto px-4 lg:px-8">
             <div class="text-center">
-                <!-- Responsive Headings -->
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
                     India's #1 <span class="text-blue-600">SMM Panel</span>
                 </h1>
@@ -184,7 +171,7 @@
                     The best and cheapest SMM reseller panel in India for high-quality social media marketing services. Boost your online presence with us!
                 </p>
                 
-                <!-- Responsive Images -->
+                <!-- First Image Section (Max-width and h-auto ensures responsiveness) -->
                 <div class="mt-10 flex justify-center px-4">
                     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDasnWE2Y4EXVJWg-sDDRbsHmPB1Ybhyeg3JI7eAoy3wZDVQdHKRsnbDOEVaKmP_aeUDcA0GVKQ3XDDJeEpwneIJDeQ5irBT4ZgycYk2bLgjDGP-yamg1QIZ0jUxHQGwAjh-K1glqeTytH1rQKj4ATd4Ij43nV55C18p9kQsNpQAMeKOjDuPeQEQPRtSM/s16000/smm-sun-about-us.webp" 
                          alt="SMM Panel Dashboard Preview" 
@@ -200,7 +187,7 @@
                         
                 </div>
 
-                <!-- Social Media Logos Strip with Moving Animation (Responsive by design) -->
+                <!-- Social Media Logos Strip with Moving Animation (Structure checked to prevent overflow) -->
                 <div class="logo-container">
                     <div class="logo-strip">
                         <!-- Logos ka pehla set -->
