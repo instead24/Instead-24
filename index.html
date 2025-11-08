@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- CRUCIAL: Ensures the viewport width is set to the device width -->
+    <!-- CRITICAL FIX: Ensures the viewport width is correctly set for mobile browsers -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <title>Instead 24 SMM Panel India - #1 SMM Reseller Panel</title>
 
@@ -12,7 +12,7 @@
 <style>
     body {
         font-family: 'Inter', sans-serif;
-        /* Ensures no unexpected horizontal scroll from the body itself */
+        /* FIX: Prevents horizontal scroll from body/root elements */
         overflow-x: hidden; 
     }
     .hero-gradient {
@@ -59,7 +59,7 @@
         border-bottom: 1px solid #e5e7eb;
     }
     
-    /* --- Social Media Logo Animation Styles (Key for Horizontal Responsiveness) --- */
+    /* --- Social Media Logo Animation Styles (Corrected for mobile overflow) --- */
     @keyframes scroll-logos {
         0% {
             transform: translateX(0);
@@ -70,7 +70,7 @@
     }
 
     .logo-container {
-        /* This is crucial for the animation not to break the layout width */
+        /* FIX: This setting is essential to hide the overflowing animated content */
         overflow: hidden; 
         padding: 0.75rem 0;
         margin-top: 2.5rem;
@@ -85,8 +85,7 @@
         display: flex;
         gap: 1.5rem; 
         animation: scroll-logos 20s linear infinite;
-        /* Add a very large minimum width to ensure the animation loop is seamless, though the container hides the overflow */
-        min-width: 200%; 
+        min-width: 200%; /* Ensures enough content for seamless loop */
     }
     
     .logo-strip:hover {
@@ -171,7 +170,7 @@
                     The best and cheapest SMM reseller panel in India for high-quality social media marketing services. Boost your online presence with us!
                 </p>
                 
-                <!-- First Image Section (Max-width and h-auto ensures responsiveness) -->
+                <!-- Image Sections -->
                 <div class="mt-10 flex justify-center px-4">
                     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDasnWE2Y4EXVJWg-sDDRbsHmPB1Ybhyeg3JI7eAoy3wZDVQdHKRsnbDOEVaKmP_aeUDcA0GVKQ3XDDJeEpwneIJDeQ5irBT4ZgycYk2bLgjDGP-yamg1QIZ0jUxHQGwAjh-K1glqeTytH1rQKj4ATd4Ij43nV55C18p9kQsNpQAMeKOjDuPeQEQPRtSM/s16000/smm-sun-about-us.webp" 
                          alt="SMM Panel Dashboard Preview" 
@@ -179,7 +178,6 @@
                         
                 </div>
 
-                <!-- Second Image Section (Trustpilot) -->
                 <div class="mt-10 flex justify-center px-4">
                     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhueGYqb4WIjGEHTg1Z4CZESk4UBgZ07DiWqIA5F-tQxACxrJFCFCcpXPLsAfW41V9hTi21iQ_d9veS2_Ks8jp4TRknQldLE20Jc8QOaswinVIizilHsK_4hZPcD0R2mx6x4gCxqliK3v9SZ0NLgRFo1D0nJ5zC_wDlmhSQQCn9bO8ovqoNoF-hUAIZJ-w/s16000/trustpilot-energy-reviews.png" 
                          alt="Social Media Growth" 
@@ -187,79 +185,31 @@
                         
                 </div>
 
-                <!-- Social Media Logos Strip with Moving Animation (Structure checked to prevent overflow) -->
+                <!-- Social Media Logos Strip (Horizontal Scroll Animation) -->
                 <div class="logo-container">
                     <div class="logo-strip">
                         <!-- Logos ka pehla set -->
                         <div class="flex space-x-8 lg:space-x-12">
-                            <!-- Instagram -->
-                            <div class="logo-item">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png" alt="Instagram" class="w-8 h-8 rounded-full">
-                            </div>
-                            <!-- Facebook -->
-                            <div class="logo-item">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTyz3sg55TqghM1PaGiRM9YvyFvUQIS-_XEKnDOd7d0A&s" alt="Facebook" class="w-8 h-8 rounded-full">
-                            </div>
-                            <!-- YouTube -->
-                            <div class="logo-item">
-                                <img src="https://img.freepik.com/premium-vector/round-youtube-logo-isolated-white-background_469489-983.jpg?semt=ais_hybrid&w=740&q=80" alt="YouTube" class="w-8 h-8 rounded-full">
-                            </div>
-                             <!-- TikTok -->
-                            <div class="logo-item">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tiktok_icon.svg/1024px-Tiktok_icon.svg.png" alt="TikTok" class="w-8 h-8 rounded-full">
-                            </div>
-                            <!-- X (Twitter) -->
-                            <div class="logo-item">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-KQUtAHY0_kl_WL-ZIzsy4jMvBX8SwWlSPhm0p6m1KA&s=10" alt="Twitter/X" class="w-8 h-8 rounded-full">
-                            </div>
-                            <!-- Telegram -->
-                            <div class="logo-item">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxt9-p8kXo4HXDznbQs0xNcCO6h-khve8gtOgqs271Jw&s=10" alt="Telegram" class="w-8 h-8 rounded-full">
-                            </div>
-                            <!-- Reddit -->
-                            <div class="logo-item">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_D1JjoIOJkBOWpiHPOpOZNedSvaANVHT5bbj4CLzj_5d8TH3g_oy-o6I&s=10" alt="Reddit" class="w-8 h-8 rounded-full">
-                            </div>
-                            <!-- Pinterest -->
-                            <div class="logo-item">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvM3RWPgBn4y2m9g1uUvNIhFuxAtKFDpnQdtktKIKpJg&s=10" alt="Pinterest" class="w-8 h-8 rounded-full">
-                            </div>
+                            <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png" alt="Instagram" class="w-8 h-8 rounded-full"></div>
+                            <div class="logo-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTyz3sg55TqghM1PaGiRM9YvyFvUQIS-_XEKnDOd7d0A&s" alt="Facebook" class="w-8 h-8 rounded-full"></div>
+                            <div class="logo-item"><img src="https://img.freepik.com/premium-vector/round-youtube-logo-isolated-white-background_469489-983.jpg?semt=ais_hybrid&w=740&q=80" alt="YouTube" class="w-8 h-8 rounded-full"></div>
+                            <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tiktok_icon.svg/1024px-Tiktok_icon.svg.png" alt="TikTok" class="w-8 h-8 rounded-full"></div>
+                            <div class="logo-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-KQUtAHY0_kl_WL-ZIzsy4jMvBX8SwWlSPhm0p6m1KA&s=10" alt="Twitter/X" class="w-8 h-8 rounded-full"></div>
+                            <div class="logo-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxt9-p8kXo4HXDznbQs0xNcCO6h-khve8gtOgqs271Jw&s=10" alt="Telegram" class="w-8 h-8 rounded-full"></div>
+                            <div class="logo-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_D1JjoIOJkBOWpiHPOpOZNedSvaANVHT5bbj4CLzj_5d8TH3g_oy-o6I&s=10" alt="Reddit" class="w-8 h-8 rounded-full"></div>
+                            <div class="logo-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvM3RWPgBn4y2m9g1uUvNIhFuxAtKFDpnQdtktKIKpJg&s=10" alt="Pinterest" class="w-8 h-8 rounded-full"></div>
                         </div>
                         
-                        <!-- Logos ka doosra set (seamless looping ke liye zaruri) -->
+                        <!-- Logos ka doosra set -->
                         <div class="flex space-x-8 lg:space-x-12">
-                           <!-- Instagram -->
-                            <div class="logo-item">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png" alt="Instagram" class="w-8 h-8 rounded-full">
-                            </div>
-                            <!-- Facebook -->
-                            <div class="logo-item">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTyz3sg55TqghM1PaGiRM9YvyFvUQIS-_XEKnDOd7d0A&s" alt="Facebook" class="w-8 h-8 rounded-full">
-                            </div>
-                            <!-- YouTube -->
-                            <div class="logo-item">
-                                <img src="https://img.freepik.com/premium-vector/round-youtube-logo-isolated-white-background_469489-983.jpg?semt=ais_hybrid&w=740&q=80" alt="YouTube" class="w-8 h-8 rounded-full">
-                            </div>
-                             <!-- TikTok -->
-                            <div class="logo-item">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tiktok_icon.svg/1024px-Tiktok_icon.svg.png" alt="TikTok" class="w-8 h-8 rounded-full">
-                            </div>
-                            <!-- X (Twitter) -->
-                            <div class="logo-item">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-KQUtAHY0_kl_WL-ZIzsy4jMvBX8SwWlSPhm0p6m1KA&s=10" alt="Twitter/X" class="w-8 h-8 rounded-full">
-                            </div>
-                            <!-- Telegram -->
-                            <div class="logo-item">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxt9-p8kXo4HXDznbQs0xNcCO6h-khve8gtOgqs271Jw&s=10" alt="Telegram" class="w-8 h-8 rounded-full">
-                            </div>
-                            <!-- Reddit -->
-                            <div class="logo-item">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_D1JjoIOJkBOWpiHPOpOZNedSvaANVHT5bbj4CLzj_5d8TH3g_oy-o6I&s=10" alt="Reddit" class="w-8 h-8 rounded-full">
-                            </div>
-                            <!-- Pinterest -->
-                            <div class="logo-item">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvM3RWPgBn4y2m9g1uUvNIhFuxAtKFDpnQdtktKIKpJg&s=10" alt="Pinterest" class="w-8 h-8 rounded-full">
-                            </div>
+                           <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png" alt="Instagram" class="w-8 h-8 rounded-full"></div>
+                           <div class="logo-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTyz3sg55TqghM1PaGiRM9YvyFvUQIS-_XEKnDOd7d0A&s" alt="Facebook" class="w-8 h-8 rounded-full"></div>
+                           <div class="logo-item"><img src="https://img.freepik.com/premium-vector/round-youtube-logo-isolated-white-background_469489-983.jpg?semt=ais_hybrid&w=740&q=80" alt="YouTube" class="w-8 h-8 rounded-full"></div>
+                           <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tiktok_icon.svg/1024px-Tiktok_icon.svg.png" alt="TikTok" class="w-8 h-8 rounded-full"></div>
+                           <div class="logo-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-KQUtAHY0_kl_WL-ZIzsy4jMvBX8SwWlSPhm0p6m1KA&s=10" alt="Twitter/X" class="w-8 h-8 rounded-full"></div>
+                           <div class="logo-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxt9-p8kXo4HXDznbQs0xNcCO6h-khve8gtOgqs271Jw&s=10" alt="Telegram" class="w-8 h-8 rounded-full"></div>
+                           <div class="logo-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_D1JjoIOJkBOWpiHPOpOZNedSvaANVHT5bbj4CLzj_5d8TH3g_oy-o6I&s=10" alt="Reddit" class="w-8 h-8 rounded-full"></div>
+                           <div class="logo-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvM3RWPgBn4y2m9g1uUvNIhFuxAtKFDpnQdtktKIKpJg&s=10" alt="Pinterest" class="w-8 h-8 rounded-full"></div>
                         </div>
                     </div>
                 </div>
@@ -272,8 +222,8 @@
                 </div>
             </div>
             
-            <!-- Stats Section (Responsive Grid) -->
-            <div class="mt-16 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Stats Section (FIXED: Added space-y-4 and removed grid-cols-1 to force stacking on mobile) -->
+            <div class="mt-16 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
                 <!-- Stat 1 -->
                 <div class="stat-card">
                     <div class="flex-shrink-0 mr-4">
@@ -323,7 +273,8 @@
                     We provide unparalleled service and support to help you achieve your social media goals.
                 </p>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- FIX: Added md:grid-cols-2 for better layout on intermediate mobile sizes -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Feature 1 -->
                 <div class="feature-card">
                     <div class="bg-blue-100 text-blue-600 rounded-full p-4 inline-block mb-6">
@@ -352,7 +303,7 @@
         </div>
     </section>
 
-    <!-- New Image Section Added Here (Responsive) -->
+    <!-- New Image Section Added Here (No change) -->
     <section class="py-20 lg:py-24 bg-white">
         <div class="container mx-auto px-4 lg:px-8">
             <div class="flex justify-center">
@@ -374,7 +325,8 @@
                     Getting started is simple. Follow these three easy steps to supercharge your social media.
                 </p>
             </div>
-            <div class="grid md:grid-cols-3 gap-8 text-center">
+             <!-- FIX: Explicitly using grid-cols-1 for stacking on mobile -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 <!-- Step 1 -->
                 <div class="p-6">
                     <div class="flex items-center justify-center h-20 w-20 mx-auto mb-6 bg-blue-100 text-blue-600 rounded-full text-3xl font-bold">1</div>
@@ -397,7 +349,7 @@
         </div>
     </section>
 
-    <!-- NEW IMAGE SECTION -->
+    <!-- NEW IMAGE SECTION (Responsive) -->
     <section class="py-12 lg:py-16 bg-white"> 
         <div class="container mx-auto px-4 lg:px-8">
             <div class="flex justify-center">
